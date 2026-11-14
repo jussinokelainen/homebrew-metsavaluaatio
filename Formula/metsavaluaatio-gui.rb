@@ -10,6 +10,24 @@ class MetsavaluaatioGui < Formula
   depends_on "sqlite"
 
   def install
+    if OS.mac?
+      unless system "xcrun", "-sdk", "macosx", "metal", "--version"
+        odie <<~EOS
+          The Apple Metal Toolchain is required to build Mytool GUI.
+
+          Install Xcode from the Mac App Store, then run:
+
+            sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+            xcodebuild -runFirstLaunch
+            xcodebuild -downloadComponent MetalToolchain
+
+          After installing the Metal Toolchain, try again:
+
+            brew reinstall #{name}
+        EOS
+      end
+    end
+
     system "cargo", "install", "--bin", "metsaval-gui", *std_cargo_args
   end
 end
