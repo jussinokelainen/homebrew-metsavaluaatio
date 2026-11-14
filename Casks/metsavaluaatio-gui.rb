@@ -9,4 +9,9 @@ cask "metsavaluaatio-gui" do
   homepage "https://github.com/jussinokelainen/metsavaluaatio-gui"
 
   app "Metsavaluaatio.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Metsavaluaatio.app"]
+  end
 end
