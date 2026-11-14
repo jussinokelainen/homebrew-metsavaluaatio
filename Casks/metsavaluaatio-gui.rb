@@ -11,15 +11,11 @@ cask "metsavaluaatio-gui" do
   app "Metsavaluaatio.app"
 
   postflight_steps do
-    [
-      {
-        command: [
-          "/usr/bin/xattr",
-          "-dr",
-          "com.apple.quarantine",
-          "#{appdir}/Metsavaluaatio.app"
-        ]
-      }
-    ]
+    run "/usr/bin/xattr",
+      args: [
+        "-dr",
+        "com.apple.quarantine",
+        "{{appdir}}/Metsavaluaatio.app"
+      ]
   end
 end
