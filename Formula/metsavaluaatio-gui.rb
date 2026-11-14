@@ -11,7 +11,7 @@ class MetsavaluaatioGui < Formula
 
   def install
     if OS.mac?
-      unless quietly { system "xcrun", "-sdk", "macosx", "metal", "--version" }
+      unless quiet_system "xcrun", "-sdk", "macosx", "metal", "--version"
         odie <<~EOS
           The Apple Metal Toolchain is required to build Mytool GUI.
 
