@@ -1,11 +1,11 @@
 cask "metsavaluaatio-gui" do
-  version "0.1.2"
-  sha256 "f05dceebdea3b74f8855b1dc656123fc408bdf5b94cf49e26e3b438d1ec31a5c"
+  version "0.1.3"
+  sha256 "5acba05c68695f05ae5d6b3f4262ab3182f226245469687c2d5bf8ce1dac0f83"
 
   url "https://github.com/jussinokelainen/metsavaluaatio-gui/releases/download/#{version}/Metsavaluaatio-macos.app.zip"
 
   name "Metsävaluaatio"
-  desc "Metsäomaisuuden arviointi GPUI-työpöytäsovelluksella"
+  desc "Työpöytäsovellus metsän analysointiin"
   homepage "https://github.com/jussinokelainen/metsavaluaatio-gui"
 
   app "Metsavaluaatio.app"
