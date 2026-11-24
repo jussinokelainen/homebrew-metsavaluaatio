@@ -1,6 +1,6 @@
 cask "metsavaluaatio-gui" do
-    version "0.2.0"
-    sha256 "dcfd3f11ef2a757fdbb85e76527492e51a7ee1f41f8093221ef52af5a3b17835"
+    version "0.2.1"
+    sha256 "9d0c8624ce9007d77a528806be4f5dfd2aac4c117e62cd772b2284c8b065ef93"
 
     url "https://github.com/jussinokelainen/metsavaluaatio-gui/releases/download/#{version}/Metsavaluaatio-macos.app.zip"
 
